@@ -26,4 +26,9 @@ class Study extends Model
     {
         return $this->belongsTo('App\Models\Building');
     }
+
+     public function carbon_footprint()
+     {
+         return $this->carbon_footprint();
+     }
 }

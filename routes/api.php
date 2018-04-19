@@ -32,5 +32,9 @@ Route::group(['middleware' => 'enableCors'], function () {
         Route::post('buildings/{building}', 'ApiController@updateBuilding');
         Route::delete('buildings/{building}', 'ApiController@deleteBuilding');
     });
-    
+
+    // Alcances routes
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::get('alcances/{building}', 'ApiController@showAlcances');
+    });
 });
