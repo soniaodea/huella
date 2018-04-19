@@ -66,16 +66,5 @@ class ApiController extends Controller
         $authBuilding = Auth::user()->buildings()->find($building);
         return response()->json($authBuilding->studies()->where('building_id',$building)->get());
 
-
-
-        //Building::with($building)->studies()->
-        //$variable = Product::with('designs')->find(1);
-        //return response()->json(Study::where('building_id',$building));
-
-        //return Study::with(Auth::user()->buildings()->find($building))->findAll();
-        //return Auth::user()->buildings()->find($building);
-
-        //return Auth::user()->buildings()->find($building);
-        //return response()->json($building, 200);
     }
 }
